@@ -1,0 +1,13 @@
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\bin\Debug\net8.0\APIControllersData.deps.json
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\bin\Debug\net8.0\APIControllersData.dll
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\bin\Debug\net8.0\APIControllersData.pdb
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\APIControllersData.csproj.AssemblyReference.cache
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\APIControllersData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\APIControllersData.AssemblyInfoInputs.cache
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\APIControllersData.AssemblyInfo.cs
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\APIControllersData.csproj.CoreCompileInputs.cache
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\APIControllersData.sourcelink.json
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\APIControllersData.dll
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\refint\APIControllersData.dll
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\APIControllersData.pdb
+C:\Users\L e  o\Desktop\API-veterinaria\API_Vet\APIControllersData\obj\Debug\net8.0\ref\APIControllersData.dll

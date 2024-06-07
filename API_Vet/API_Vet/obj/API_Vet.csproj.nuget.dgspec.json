@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\API_Vet\\API_Vet.csproj": {}
+    "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\API_Vet\\API_Vet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj": {
+    "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj",
+        "projectUniqueName": "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj",
         "projectName": "APIControllersData",
-        "projectPath": "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj",
-        "packagesPath": "C:\\Users\\estev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\APIControllersData\\obj\\",
+        "projectPath": "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj",
+        "packagesPath": "C:\\Users\\L e  o\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\APIControllersData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\estev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\L e  o\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,17 +81,17 @@
         }
       }
     },
-    "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\API_Vet\\API_Vet.csproj": {
+    "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\API_Vet\\API_Vet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\API_Vet\\API_Vet.csproj",
+        "projectUniqueName": "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\API_Vet\\API_Vet.csproj",
         "projectName": "API_Vet",
-        "projectPath": "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\API_Vet\\API_Vet.csproj",
-        "packagesPath": "C:\\Users\\estev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\API_Vet\\obj\\",
+        "projectPath": "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\API_Vet\\API_Vet.csproj",
+        "packagesPath": "C:\\Users\\L e  o\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\API_Vet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\estev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\L e  o\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,8 +105,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj": {
-                "projectPath": "C:\\Users\\estev\\Downloads\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj"
+              "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj": {
+                "projectPath": "C:\\Users\\L e  o\\Desktop\\API-veterinaria\\API_Vet\\APIControllersData\\APIControllersData.csproj"
               }
             }
           }
