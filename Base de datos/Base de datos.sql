@@ -479,8 +479,8 @@ CREATE TABLE AnomaliasExamen (
 USE API_Vet;
 
 -- Insertar datos en la tabla Veterinario
-INSERT INTO Veterinario (Nombre, Apellido, Especialidad) VALUES ('Juan', 'Pérez', 'Cirugía');
-INSERT INTO Veterinario (Nombre, Apellido, Especialidad) VALUES ('Ana', 'Gómez', 'Dermatología');
+INSERT INTO Veterinario (Nombre, Apellido, Especialidad) VALUES ('Juan', 'Pï¿½rez', 'Cirugï¿½a');
+INSERT INTO Veterinario (Nombre, Apellido, Especialidad) VALUES ('Ana', 'Gï¿½mez', 'Dermatologï¿½a');
 
 -- Insertar datos en la tabla Animal
 INSERT INTO Animal (Especie, Edad, Genero) VALUES ('Perro', 5, 'Macho');
@@ -488,13 +488,13 @@ INSERT INTO Animal (Especie, Edad, Genero) VALUES ('Gato', 3, 'Hembra');
 
 -- Insertar datos en la tabla ExamenClinico
 INSERT INTO ExamenClinico (TipoAnalisis, Resultados, Id_Animal, Id_Veterinario) 
-VALUES ('Hematología', 'Normales', 1, 1);
+VALUES ('Hematologï¿½a', 'Normales', 1, 1);
 INSERT INTO ExamenClinico (TipoAnalisis, Resultados, Id_Animal, Id_Veterinario) 
-VALUES ('Bioquímica', 'Anormales', 2, 2);
+VALUES ('Bioquï¿½mica', 'Anormales', 2, 2);
 
 -- Insertar datos en la tabla TipoAnalisis
-INSERT INTO TipoAnalisis (Nombre, Descripcion) VALUES ('Hematología', 'Análisis de la sangre');
-INSERT INTO TipoAnalisis (Nombre, Descripcion) VALUES ('Bioquímica', 'Análisis químico de fluidos');
+INSERT INTO TipoAnalisis (Nombre, Descripcion) VALUES ('Hematologï¿½a', 'Anï¿½lisis de la sangre');
+INSERT INTO TipoAnalisis (Nombre, Descripcion) VALUES ('Bioquï¿½mica', 'Anï¿½lisis quï¿½mico de fluidos');
 
 -- Insertar datos en la tabla ParametroAnalisis
 INSERT INTO ParametroAnalisis (Nombre, ValorReferencia, Id_TipoAnalisis) 
@@ -504,17 +504,17 @@ VALUES ('Hematocrito', '40-50%', 1);
 
 -- Insertar datos en la tabla Anomalia
 INSERT INTO Anomalia (Nombre, Descripcion) VALUES ('Hipoglucemia', 'Bajo nivel de glucosa en la sangre');
-INSERT INTO Anomalia (Nombre, Descripcion) VALUES ('Anemia', 'Disminución de glóbulos rojos');
+INSERT INTO Anomalia (Nombre, Descripcion) VALUES ('Anemia', 'Disminuciï¿½n de glï¿½bulos rojos');
 
 -- Insertar datos en la tabla ParametroExamen
 INSERT INTO ParametroExamen (Valor, Id_Examen, Id_ParametroAnalisis) 
-VALUES ('85 mg/dL', 1, 1);
+VALUES ('85 mg/dL', 3, 4);
 INSERT INTO ParametroExamen (Valor, Id_Examen, Id_ParametroAnalisis) 
-VALUES ('45%', 2, 2);
+VALUES ('45%', 4, 5);
 
 -- Insertar datos en la tabla AnomaliasExamen
-INSERT INTO AnomaliasExamen (Id_Anomalia, Id_Examen) VALUES (1, 1);
-INSERT INTO AnomaliasExamen (Id_Anomalia, Id_Examen) VALUES (2, 2);
+INSERT INTO AnomaliasExamen (Id_Anomalia, Id_Examen) VALUES (1, 3);
+INSERT INTO AnomaliasExamen (Id_Anomalia, Id_Examen) VALUES (2, 4);
 
 
 
