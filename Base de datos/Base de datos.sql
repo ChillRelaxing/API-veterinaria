@@ -189,8 +189,6 @@ END
 EXEC dbo.spParametroAnalisis_GetById 1
 
 
-
-
 -------------------------------------------------
 -------------------------------------------------
 -------------------------------------------------
@@ -271,7 +269,7 @@ exec dbo.spParametroExamen_GetAll
 -------------------------------------------------
 --Procedimiento Almacenado para Obtener por ID con INNER JOIN
 
-alter PROCEDURE dbo.spParametroExamen_GetById
+CREATE PROCEDURE dbo.spParametroExamen_GetById
     @Id_ParametroExamen INT
 AS
 BEGIN
@@ -404,6 +402,244 @@ BEGIN
     WHERE 
         ec.Id_Examen = @Id_Examen;
 END
+
+EXEC  dbo.spExamenClinico_GetById 1
+
+-- ============  STORED PROCEDURES ============== ---
+
+-- ========= Veterinario ========= 
+
+-- Stored Procedure to GetAll
+CREATE OR ALTER PROCEDURE spVeterinario_GetAll
+AS
+BEGIN
+	SELECT Id_Veterinario, Nombre, Apellido, Especialidad FROM Veterinario
+END
+GO
+
+exec spVeterinario_GetAll
+
+-- Stored Procedure to GetByID
+CREATE OR ALTER PROCEDURE spVeterinario_GetById
+	@Id_Veterinario INT
+AS
+BEGIN
+	SELECT Id_Veterinario, Nombre, Apellido, Especialidad FROM Veterinario
+	WHERE Id_Veterinario = @Id_Veterinario
+END
+GO
+
+-- Stored Procedure to Insert
+CREATE OR ALTER PROCEDURE spVeterinario_Insert
+	@Nombre NVARCHAR(30),
+	@Apellido NVARCHAR(30),
+	@Especialidad NVARCHAR(50)
+AS
+BEGIN
+	INSERT INTO Veterinario (Nombre, Apellido, Especialidad)
+	VALUES (@Nombre, @Apellido, @Especialidad)
+END
+GO
+
+-- Stored Procedure to Delete
+CREATE OR ALTER PROCEDURE spVeterinario_Delete
+	@Id_Veterinario INT
+AS
+BEGIN
+	DELETE FROM Veterinario WHERE Id_Veterinario = @Id_Veterinario
+END
+GO
+
+-- Stored Procedure to Update 
+CREATE OR ALTER PROCEDURE spVeterinario_Update
+    @Id_Veterinario INT,
+    @Nombre NVARCHAR(30),
+    @Apellido NVARCHAR(30),
+    @Especialidad NVARCHAR(50)
+AS
+BEGIN
+    UPDATE Veterinario
+    SET
+        Nombre = @Nombre,
+        Apellido = @Apellido,
+        Especialidad = @Especialidad
+    WHERE Id_Veterinario = @Id_Veterinario
+END
+GO
+
+-- ========= Animal ========= 
+
+-- Stored Procedure to Get All
+CREATE OR ALTER PROCEDURE spAnimal_GetAll
+AS
+BEGIN
+    SELECT Id_Animal, Especie, Edad, Genero FROM Animal
+END
+GO
+
+-- Stored Procedure to Get a by ID
+CREATE OR ALTER PROCEDURE spAnimal_GetById
+    @Id_Animal INT
+AS
+BEGIN
+    SELECT Id_Animal, Especie, Edad, Genero FROM Animal
+    WHERE Id_Animal = @Id_Animal
+END
+GO
+
+-- Stored Procedure to Insert
+CREATE OR ALTER PROCEDURE spAnimal_Insert
+    @Especie NVARCHAR(50),
+    @Edad INT,
+    @Genero NVARCHAR(50)
+AS
+BEGIN
+    INSERT INTO Animal (Especie, Edad, Genero)
+    VALUES (@Especie, @Edad, @Genero)
+END
+GO
+
+-- Stored Procedure to Update 
+CREATE OR ALTER PROCEDURE spAnimal_Update
+    @Id_Animal INT,
+    @Especie NVARCHAR(50),
+    @Edad INT,
+    @Genero NVARCHAR(50)
+AS
+BEGIN
+    UPDATE Animal
+    SET
+        Especie = @Especie,
+        Edad = @Edad,
+        Genero = @Genero
+    WHERE Id_Animal = @Id_Animal
+END
+GO
+
+-- Stored Procedure to Delete
+CREATE OR ALTER PROCEDURE spAnimal_Delete
+    @Id_Animal INT
+AS
+BEGIN
+    DELETE FROM Animal WHERE Id_Animal = @Id_Animal
+END
+GO
+
+
+-- // ========= Anomalia // ========= 
+
+-- Stored Procedure to Insert
+CREATE OR ALTER PROCEDURE spAnomalia_Insert
+	@Nombre NVARCHAR(75),
+	@Descripcion NVARCHAR(100)
+AS
+BEGIN
+	INSERT INTO Anomalia(Nombre, Descripcion)
+	VALUES (@Nombre, @Descripcion)
+END
+GO
+
+-- Stored Procedure to Get All
+CREATE OR ALTER PROCEDURE spAnomalia_GetAll
+AS
+BEGIN
+	SELECT Id_Anomalia, Nombre, Descripcion FROM Anomalia
+END
+GO
+
+-- Stored Procedure to Get a by ID
+CREATE OR ALTER PROCEDURE spAnomalia_GetById
+	@Id_Anomalia INT
+AS
+BEGIN
+	SELECT Id_Anomalia, Nombre, Descripcion FROM Anomalia
+	WHERE Id_Anomalia = @Id_Anomalia
+END
+GO
+
+-- Stored Procedure to Delete
+CREATE OR ALTER PROCEDURE spAnomalia_Delete
+	@Id_Anomalia INT
+AS
+BEGIN
+	DELETE FROM Anomalia WHERE Id_Anomalia = @Id_Anomalia
+END
+GO
+
+-- Stored Procedure to Update 
+CREATE OR ALTER PROCEDURE spAnomalia_Update
+	@Id_Anomalia INT,
+	@Nombre NVARCHAR(75),
+	@Descripcion NVARCHAR(100)
+AS
+BEGIN
+	UPDATE Anomalia
+	SET 
+		Nombre = @Nombre,
+		Descripcion = @Descripcion
+	WHERE Id_Anomalia = @Id_Anomalia
+END
+GO
+
+
+--// ========= AnomaliasExamen //========= 
+
+-- Stored Procedure to Get All
+CREATE OR ALTER PROCEDURE spAnomaliasExamen_GetAll
+AS
+BEGIN
+	SELECT Id_AnomaliaExamen, AE.Id_Anomalia, A.Nombre, AE.Id_Examen, EC.TipoAnalisis FROM AnomaliasExamen AS AE
+	INNER JOIN Anomalia AS A ON AE.Id_Anomalia = A.Id_Anomalia 
+	INNER JOIN ExamenClinico AS EC ON AE.Id_Examen = EC.Id_Examen
+END
+GO
+
+-- Stored Procedure to Get a by ID
+CREATE OR ALTER PROCEDURE spAnomaliasExamen_GetById
+	@Id_AnomaliaExamen INT
+AS
+BEGIN
+	SELECT Id_AnomaliaExamen, AE.Id_Anomalia, A.Nombre, AE.Id_Examen, EC.TipoAnalisis FROM AnomaliasExamen AS AE
+	INNER JOIN Anomalia AS A ON AE.Id_Anomalia = A.Id_Anomalia 
+	INNER JOIN ExamenClinico AS EC ON AE.Id_Examen = EC.Id_Examen
+	WHERE AE.Id_AnomaliaExamen = @Id_AnomaliaExamen
+END
+GO
+
+-- Stored Procedure to Insert
+CREATE OR ALTER PROCEDURE spAnomaliasExamen_Insert
+	@Id_Anomalia INT,
+	@Id_Examen INT 
+AS
+BEGIN
+	INSERT INTO AnomaliasExamen (Id_Anomalia, Id_Examen)
+	VALUES (@Id_Anomalia, @Id_Examen)
+END
+GO
+
+-- Stored Procedure to Update
+CREATE OR ALTER PROCEDURE spAnomaliasExamen_Update
+	@Id_AnomaliaExamen INT,
+	@Id_Anomalia INT,
+	@Id_Examen INT 
+AS
+BEGIN
+	UPDATE AnomaliasExamen
+	SET
+		Id_Anomalia = @Id_Anomalia,
+		Id_Examen = @Id_Examen
+	WHERE Id_AnomaliaExamen = @Id_AnomaliaExamen
+END
+GO
+
+-- Stored Procedure to Delete
+CREATE OR ALTER PROCEDURE spAnomaliasExamen_Delete
+	@Id_AnomaliaExamen INT
+AS
+BEGIN
+	DELETE FROM AnomaliasExamen WHERE Id_AnomaliaExamen = @Id_AnomaliaExamen
+END
+GO
 
 
 -------------------------------------------------

@@ -21,9 +21,8 @@ namespace APIControllersData.Validations
 
             RuleFor(x => x.Edad)
                 .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("La Edad es Obligatorio")
-                .MinimumLength(4).WithMessage("Debe contener mínimo 4 letras")
-                .MaximumLength(15).WithMessage("Solo se permite un maximo de 15 caracteres");
+                .NotEmpty().WithMessage("La Edad es obligatoria")
+                .GreaterThan(0).WithMessage("La Edad debe ser un número positivo");
 
             RuleFor(x => x.Genero)
                 .Cascade(CascadeMode.Stop)
